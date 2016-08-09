@@ -13,7 +13,7 @@ import colour.colorimetry.dataset as dataset
 
 # Main section start from here.
 
-sample = sio.loadmat('vishal.mat')
+sample = sio.loadmat('input_mat.mat')
 spd_all_sample = np.transpose(sample.get('vishal'))
 siz = spd_all_sample.shape
 
