@@ -19,7 +19,7 @@ NumCols = InputText{1};
 Ratio = textscan(fileID,'%f','delimiter',',');
 Ratio_val = Ratio{1};
 for i =1:1:numel(Ratio_val)
-    if Ratio_val >=1.0
+    if Ratio_val > 1
         Ratio_val(i) = 1;
     end
 end
