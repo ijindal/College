@@ -29,6 +29,15 @@ NumCols = InputText{1};
 NumRows = InputText{2};
 Final = textscan(fileID,'%f','delimiter',',');
 Final_val = reshape(Final{1},[NumRows,NumCols])';
+
+for i = 1:1:size(Final_val,1)
+    for j = 1:1:size(Final_val,2)
+        if Final_val(i,j) > 1
+            Final_val(i,j) = 1;
+        end
+    end
+end
+
 clear Final
 for i=1:1:20
     hold on
