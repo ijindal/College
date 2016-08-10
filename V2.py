@@ -14,7 +14,7 @@ import colour.colorimetry.dataset as dataset
 # Main section start from here.
 
 sample = sio.loadmat('input_mat.mat')
-spd_all_sample = np.transpose(sample.get('vishal'))
+spd_all_sample = np.transpose(sample.get('Input'))
 siz = spd_all_sample.shape
 
 # Defining a sample spectral power distribution data.
@@ -54,7 +54,7 @@ for i in range(siz[0]-1):
     # print(RGB)
 
     # Plotting the *sRGB* colourspace colour of the *Sample* spectral power distribution.
-    # single_colour_plot(ColourParameter('Sample', RGB), text_size=32)
+    single_colour_plot(ColourParameter('Sample', RGB), text_size=32)
 
     xy =  colour.XYZ_to_xy(XYZ)
     # print(xy)
