@@ -18,11 +18,11 @@ InputText = textscan(fileID,'ratio factor(1,%d)');
 NumCols = InputText{1};
 Ratio = textscan(fileID,'%f','delimiter',',');
 Ratio_val = Ratio{1};
-for i =1:1:numel(Ratio_val)
-    if Ratio_val(i) > 1
-        Ratio_val(i) = 1;
-    end
-end
+%for i =1:1:numel(Ratio_val)
+%    if Ratio_val(i) > 1
+%        Ratio_val(i) = 1;
+%    end
+%end
 clear Ratio
 InputText = textscan(fileID,'ratio shape:transmission: Re(T) vs position(%d,%d)');
 NumCols = InputText{1};
